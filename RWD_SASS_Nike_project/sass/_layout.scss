@@ -1,0 +1,466 @@
+@import"grid";
+@import"mixins";
+@import"variables";
+
+.wrap {
+    position: relative;
+    overflow: hidden;
+    max-width: 960px;
+    margin: 0 auto;
+    min-height: 1000px;
+}
+
+.mobile-close {
+    display: inline-block;
+    margin: 1em;
+    text-decoration: none;
+    margin-left: 15px;
+    @include hide-side;
+}
+
+.mobile-link {
+    background: $white;
+    padding: 5px;
+    display: inline-block;
+    margin: .3em;
+    text-decoration: none;
+    display: block;
+    position: relative;
+    width: 48px;
+    height: 48px;
+    margin-top: 1px;
+    cursor: pointer;
+    display: none;
+
+    span {
+        display: block;
+        width: 36px;
+        height: 2px;
+        background-color: $black;
+        position: absolute;
+        opacity: 1;
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        bottom: 0px;
+        margin: auto;
+        @include transition(0.3s);
+        @include liner{
+            @include transformY(-10px);
+        }
+        /*最下面線*/
+        @include liner3(){
+            @include transformY(10px);
+        }
+    }
+}
+
+@include ipad {
+    .mobile-link {
+        display: inline-block;
+    }
+}
+
+
+
+.main {
+    @include transition(0.3s);
+}
+
+.header {
+    max-height: 50px;
+    border-bottom: 1px solid rgba(214, 211, 211, 0.76);
+    margin-bottom: 1em;
+    position: relative;
+    @include clearfix;
+    .menu {
+        float: right;
+        li {
+            float: left;
+            a {
+                font-size: $font-s;
+                color: rgb(124, 124, 124);
+                height: 50px;
+                line-height: 50px;
+                padding: 0 1em;
+                display: block;
+                @include transition(0.8s);
+                padding: 0.8em;
+                cursor: pointer;
+                 @include link-hover {
+                color: $black;
+                font-weight: bold;
+                 @include transition(0.3s);
+                 }
+            }
+        }
+    }
+}
+
+.open .header .menu {
+    display: none;
+}
+
+@include ipad-mobile {
+    .header {
+        position: fixed;
+        width: 100%;
+        background: $white;
+    }
+}
+
+
+.menu .discountwords {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: rgb(240, 59, 59);
+}
+
+@include ipad-mobile {
+    .menu .discountwords {
+        display: none;
+    }
+}
+
+.accountlogo img {
+    width: 14px;
+    height: 16px;
+}
+
+.shooplogo img {
+    width: 17px;
+    height: 17px;
+}
+
+.Lgelogo img {
+    width: 15px;
+    height: 15px;
+}
+
+.aside {
+    position: absolute;
+    /*上下滿版*/
+    top: 0;
+    bottom: 0;
+    width: 260px;
+    height: 100%;
+    background-color: rgb(151, 151, 149);
+    overflow: hidden;
+    @include transformX(-270px);
+    @include transition(0.3s);
+    z-index: 200;
+
+    .nikelogo {
+        float: left;
+        background-color: $white;
+        width: 56px;
+        height: 56px;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        border: 1px solid $black;
+        cursor: pointer;
+        @include transition(0.3s);
+
+        @include link-hover {
+            background-color: rgb(245, 52, 52);
+        }
+    }
+
+    .menu li {
+        margin: 1em;
+        color: $white;
+        a {
+            color: $white;
+            padding: 1em;
+            display: block;
+            border: 1px solid $black;
+            font-family: $fantasy;
+            font-size: 16px;
+            color: #070806;
+            @include link-hover{
+                color:$black;
+                background: $white;
+                @include transition(0.4s);
+            }
+        }
+    }
+
+}
+
+/*增加 class open 觸發選單*/
+
+.open .main {
+    @include transformX(270px);
+}
+
+.open .aside {
+    @include transformX(0px);
+}
+
+
+.aside .menu .section_header {
+    background: #161a12;
+    font-weight: bold;
+    a{
+        color:$white;
+    }
+}
+
+.rightsrh {
+    padding: 1em;
+    position: relative;
+
+    p {
+        margin-bottom: 1em;
+    }
+}
+
+@include ipad-mobile {
+    .rightsrh {
+        display: none;
+    }
+}
+
+.serch {
+    float: right;
+    border: 2px solid $black;
+    @include border-radius(20px);
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    form {
+        width: 110px;
+    }
+
+    option {
+        background-color: $white;
+        border: 1px solid #aaa;
+        padding: 5px 8px;
+        width: auto;
+        height: auto;
+        color: $white;
+        font-weight: 700;
+        font-size: $font-s;
+        opacity: 0.8;
+        margin-left: 4px;
+        @include border-radius(3px);
+    }
+
+    input {
+        border: 1px solid rgb(255, 254, 254);
+        width: 58px;
+        height: 19px;
+        outline: none;
+        margin-bottom: 1px;
+    }
+
+
+    i {
+        width: 15px;
+        height: 15px;
+        margin-left: 5px;
+        cursor: pointer;
+        margin-right: 2px;
+        margin-top: 2px;
+    }
+}
+
+@include ipad-mobile {
+    .serch {
+        margin-top: 2.2em;
+        margin-right: 1em;
+
+        input {
+            width: 75px;
+            height: 19px;
+        }
+
+        form {
+            background: $white;
+            @include border-radius(30px);
+        }
+    }
+}
+
+.main {
+    @include clearfix;
+}
+
+.contentlogo .bearphoto {
+    background-image: url(../images/bearphoto.png);
+    width: 142px;
+    height: 184px;
+    margin: 1em auto;
+    cursor: pointer;
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+@include ipad-mobile {
+    .contentlogo .bearphoto {
+        margin-top: 4.5em;
+    }
+}
+
+.selectbar {
+    border-top: 4px double #d3d3d3;
+    border-bottom: 4px double #d3d3d3;
+}
+
+.content {
+    text-align: center;
+    @include clearfix;
+
+    .selectbar {
+        display: inline-block;
+        margin-top: 1em;
+
+        li {
+            float: left;
+
+            a {
+                display: block;
+                font-family: $fantasy;
+                margin: 1px 1.5em;
+                padding: 5px 20px;
+                color: rgb(75, 74, 74);
+                border-bottom: 1px solid $white;
+
+                @include link-hover {
+                    color: rgb(130, 168, 6);
+                    @include transition(0.35s);
+
+                }
+            }
+
+        }
+    }
+}
+
+
+.container {
+    text-align: center;
+    height: auto;
+    @include clearfix;
+
+    h3 {
+        color: #626262;
+        font-family: $Microsoft_JhengHei;
+        font-size: 36px;
+        line-height: initial;
+        margin-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        text-align: center;
+    }
+}
+
+/*footer*/
+
+.footer {
+    width: 100%;
+    position: relative;
+    height: auto;
+    background-color: #0e0c0c;
+    @include clearfix;
+
+    .col {
+        width: 190px;
+        height: auto;
+        float: left;
+        padding: 0px 20px 20px 50px;
+
+        h5 {
+            font-family: inherit;
+            font-size: $font-s;
+            line-height: 17px;
+            padding: 20px 0px 5px 0px;
+            color: rgba(255, 255, 255, 0.2);
+            letter-spacing: 0.250em;
+            text-transform: uppercase;
+            font-size: 12px;
+            /*字體大寫*/
+        }
+
+        ul li {
+            margin: 10px 0 10px 0;
+
+            a {
+                color: #999999;
+                font-size: $font-s;
+                font-family: $Microsoft_JhengHei;
+                padding: 5px 0px 5px 0px;
+                cursor: pointer;
+                @include transition(0.2s);
+
+                @include link-hover {
+                    color: $white;
+                    @include transition(0.1s);
+                }
+            }
+        }
+    }
+
+    .social {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        img {
+            @include border-radius(100%);
+            cursor: pointer;
+            margin-right: 8.5px;
+        }
+    }
+}
+
+.social ul li {
+    float: left;
+    margin-right: 1em;
+}
+
+.contain {
+    position: relative;
+}
+
+@include ipad-mobile {
+    .footer .social {
+        position: inherit;
+        /*繼承自父層 position 定位屬性的值。*/
+    }
+}
+
+@include iphone8 {
+    .footer .col {
+        width: 50%;
+    }
+}
+
+@include iphonex {
+    .footer .col {
+        width: 100%;
+    }
+}
+
+.contain {
+    @include clearfix;
+}
+
+.footer_endline {
+    width: 100%;
+    height: auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 5px 0;
+
+    p {
+        text-align: center;
+        font-family: Arial;
+        font-size: 13px;
+        color: rgb(153, 153, 153);
+        padding: $font-l 0;
+    }
+}
+/*只有單獨一個樣式的話還需要用$變數來管理嗎*/

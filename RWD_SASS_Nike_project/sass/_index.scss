@@ -1,0 +1,127 @@
+@import"grid";
+@import"mixins";
+
+$Microsoft_JhengHei:微軟正黑體, Microsoft JhengHei;
+
+.newitemsphoto {
+    background-image: url(../images/newitemspho.png);
+    max-width: 543px;
+    height: 290px;
+    margin: 2.5em auto;
+    position: relative;
+
+    h2 {
+        position: absolute;
+        top: 7%;
+        left: 15%;
+
+        .gonewitems {
+            width: 20px;
+            height: 30px;
+
+            @include link-hover {
+                background: #aef35f;
+                cursor: pointer;
+                border-radius: 50%;
+            }
+        }
+
+        a {
+            font-family: fantasy;
+            color: black;
+            font-size: 20px;
+
+            @include link-hover {
+                color: white;
+            }
+        }
+    }
+}
+
+@include ipad-mobile {
+    .newitemsphoto {
+        display: none;
+    }
+
+    .content .selectbar li {
+        width: 98%;
+        margin-bottom: 1em;
+        float: left;
+        font-size: 35px;
+    }
+}
+
+.content {
+    @include clearfix;
+}
+
+.container {
+    text-align: center;
+    height: auto;
+    @include clearfix;
+
+    h3 {
+        color: #626262;
+        font-family: $Microsoft_JhengHei;
+        font-size: 36px;
+        line-height: initial;
+        margin-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        text-align: center;
+    }
+}
+
+.container .customer_space {
+    display: inline-block;
+    font-family: $Microsoft_JhengHei;
+    font-size: 22px;
+    letter-spacing: .5px;
+    margin-bottom: 20px;
+
+    li {
+        float: left;
+        margin: 1em;
+        box-shadow: 1px 1px 8px 1px grey;
+
+        h4,
+        p {
+            margin: 0.65em 0;
+            text-align: center;
+            font-weight: bold;
+            color: #333232;
+            font-size: 18px;
+            width: 100%;
+        }
+
+        span {
+            color: #0394ee;
+            font-size: 18px;
+            padding: 15px;
+
+            @include link-hover {
+                color: rgba(250, 33, 33, 0.808);
+                cursor: pointer;
+            }
+        }
+    }
+
+    img {
+        border-bottom: 1px solid rgb(182, 180, 180);
+
+        @include link-hover {
+            box-shadow: 1px 1px 8px 1px rgb(153, 152, 152);
+            cursor: pointer;
+        }
+    }
+
+}
+
+@include ipad-mobile {
+    .container .customer_space li {
+        float: none;
+        width: 98%;
+        margin: 1em auto;
+    }
+}
+

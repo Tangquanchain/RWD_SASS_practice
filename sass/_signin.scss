@@ -1,0 +1,124 @@
+@import"mixins";
+@import"variables";
+@import"grid";
+
+$white:#fff;
+$blue:#232b3b;
+/*sign in*/
+.signinbar {
+    margin: 6% auto;
+    max-width: 420px;
+    background: #202736;
+}
+
+.signinside {
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 4.1em;
+    margin-left: 57px;
+
+    h6 {
+        color: $white;
+        font-size: 2.1em;
+        font-family: Helvetica;
+        margin-bottom: 8px;
+
+    }
+
+    p>span {
+        font-size: $font-l;
+        font-family: Helvetica;
+        color: rgb(192, 238, 65);
+    }
+
+    p a {
+        display: block;
+        color: $white;
+        font-size: 13px;
+        float: left;
+        font-family: Helvetica;
+
+        @include link-hover {
+            color: rgb(185, 184, 184);
+            @include transition (0.2s);
+
+        }
+    }
+
+    form {
+        border: 1px solid rgb(202, 200, 200);
+        background: $blue;
+        margin-top: 5px;
+        padding: 1.5px;
+        @include border-radius(3px);
+        width: 180px;
+
+        label>img {
+            border-right: 1px solid #6a6b6d;
+        }
+    }
+
+    input {
+        border: 2px solid $blue;
+        background: $blue;
+        outline: none;
+        width: 90px;
+        cursor: pointer;
+        color:$white;
+    }
+
+    .tick {
+        float: left;
+        width: 10px;
+        height: 10px;
+        @include border-radius(1px);
+        border: 1px solid rgb(197, 195, 195);
+    }
+
+    .sendbtn {
+        background: #e6b333;
+        border: none;
+        color: $white;
+        text-align: center;
+        font-size: 1.2em;
+        cursor: pointer;
+        width: 180px;
+        @include border-radius(3px);
+        padding: 5px;
+        height: 30px;
+        margin-top: 6px;
+
+        @include link-hover {
+            background: rgb(185, 184, 184);
+            border: 1px solid rgba(158, 156, 156, 0.589);
+            @include transition (0.2s);
+        }
+    }
+
+    .fbbtn {
+        background: #21538d;
+        border: none;
+        color: $white;
+        text-align: center;
+        font-size: 1.2em;
+        cursor: pointer;
+        width: 180px;
+        @include border-radius(3px);
+        padding: 5px;
+        height: 30px;
+        margin-top: 6px;
+
+        @include link-hover {
+            background: rgb(185, 184, 184);
+            border: 1px solid rgba(158, 156, 156, 0.589);
+            @include transition(0.2s);
+        }
+    }
+
+}
+
+@include iphonex {
+    .signinside {
+        padding: 0;
+    }
+}

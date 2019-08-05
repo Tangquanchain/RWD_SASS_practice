@@ -1,0 +1,269 @@
+@import"grid";
+@import"mixins";
+@import"variables";
+
+
+/*leftside_shoes*/
+.banner {
+    max-width: 960px;
+    margin: 50 auto;
+    background: $white;
+    @include border-radius(20px);
+    position: relative;
+    text-align: left;
+    @include clearfix;
+}
+
+.nikelogo {
+    width: 65px;
+    height: 65px;
+    margin-bottom: 10px;
+
+}
+
+.shoes_detailleft {
+    float: left;
+    background: linear-gradient(rgb(24, 24, 24), rgb(75, 70, 70));
+    width: 270px;
+    color: $white;
+    padding: 30px;
+    margin: 5em 0;
+    margin-left: 50px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+@include iphone {
+    .shoes_detailleft {
+        float: none;
+        padding: 0px;
+        border: 0px;
+        margin: 1em 0;
+        height: auto;
+        @include border-radius(20px);
+        background-image: url(../images/mobile_redshoes.png);
+        width: 350px;
+        height: 230px;
+    }
+}
+
+.product_title {
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    font-family: Arial;
+
+    span {
+        font-weight: bold;
+    }
+}
+
+
+
+.product-description {
+    font-size: 15px;
+    font-family: $Microsoft_JhengHei;
+}
+
+.product_shoes {
+    max-width: none;
+    width: 350px;
+    margin-top: 30px;
+    margin-left: -110px;
+}
+
+.product_suit,
+.product_suit-details {
+    text-align: center;
+    font-family: Arial;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.product_suit {
+    margin-bottom: 10px;
+}
+
+@include iphone {
+    .shoes_detailleft {
+        margin-top: 40px;
+        margin-left: 35px;
+    }
+
+    .product_shoes {
+        display: none;
+    }
+
+    .product-description {
+        display: none;
+    }
+
+    .product_title {
+        font-size: 15px;
+        color: rgb(111, 231, 87);
+        text-align: center;
+    }
+
+    .product_suit,
+    .product_suit-details {
+        color: rgb(111, 231, 87);
+    }
+
+    .mobilenike {
+        margin-left: 1.5em;
+
+    }
+
+
+}
+
+@include iphonex {
+    .shoes_detailleft {
+        margin-left: 15px;
+    }
+}
+
+/*rightside_shoes*/
+
+.shoes_detailright {
+    float: left;
+    width: 600px;
+    height: auto;
+    text-transform: uppercase;
+    padding: 30px 0 0 30px;
+    margin-top: 80px;
+    border-top: 1px solid rgba(190, 190, 190, 0.35);
+    border-right: 1px solid rgba(190, 190, 190, 0.35);
+    @include border-top-right-radius(20px);
+    @include border-top-right-radius(20px);
+}
+
+@include iphone {
+    .shoes_detailright {
+        width: 98%;
+        float: none;
+        margin-top: 0px;
+        border: none;
+        margin-left: 12px;
+    }
+}
+
+.shoes_detailright p {
+    line-height: 1.5em;
+}
+
+.manuse p {
+    font-size: 24px;
+}
+
+.titleRt_words p {
+    font-family: Helvetica;
+    font-size: 24px;
+}
+
+.product_price p {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.shoeschangeside img {
+    font-size: 40px;
+    cursor: pointer;
+
+    @include link-hover {
+        background: #dfdede;
+    }
+
+}
+
+.changesize {
+    font-size: 24px;
+}
+
+.shoes_size .selectsize {
+    padding-top: 17px;
+    margin-bottom: 15px;
+
+    li {
+        float: left;
+        padding: 10px;
+        border: 1px solid rgb(196, 188, 188);
+        @include border-radius(9%);
+        margin-right: 10px;
+
+        @include link-hover {
+            border: 2px solid $black;
+            @include transition(0.2s);
+        }
+
+        a {
+            display: block;
+            font-size: 25px;
+            color: $black;
+            border-bottom: 5px solid #fff;
+        }
+    }
+}
+
+.purchase_btn {
+    padding-top: 50px;
+
+    input {
+        font-size:$font-m;
+        padding: 12px 20px;
+        font-family: $Microsoft_JhengHei;
+        width: 72%;
+        background: #050505;
+        color: $white;
+        cursor: pointer;
+        border: 1px solid rgba(129, 127, 127, 0.589);
+        @include border-radius(2%);
+        outline: none;
+
+        @include link-hover {
+            background: rgb(185, 184, 184);
+            border: 1px solid rgba(158, 156, 156, 0.589);
+            @include transition(0.2s);
+        }
+    }
+}
+
+.giftclick {
+    background: $black;
+    width: 40px;
+    height: 40px;
+    padding: 11px;
+    border-radius: 2%;
+    cursor: pointer;
+
+    @include link-hover {
+        background: rgb(185, 184, 184);
+        border: 1px solid rgba(158, 156, 156, 0.589);
+        @include transition(0.2s);
+    }
+}
+
+.likeshare_bar img {
+    padding-top: 10px;
+    padding-bottom: 45px;
+    margin: 10px 6px 6px 0;
+    cursor: pointer;
+    &:hover {
+        animation: move 1s infinite;
+    }
+}
+
+@keyframes move {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    50% {
+        transform: translate3d(0, 10px, 0);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+

@@ -1,0 +1,73 @@
+@mixin hide-side{
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+@mixin link-hover{
+    &:hover{
+        @content;
+    }
+}
+
+@mixin clearfix{
+    &:after{
+        display: block;
+        clear:both;
+        content:"";
+    }
+}
+
+@mixin transition($parameters){
+    -webkit-transition:all $parameters;
+    -moz-transition:all $parameters;
+    -o-transition:all $parameters;
+    transition:all $parameters;
+}
+
+
+@mixin border-radius($parameters){
+    -webkit-border-radius: $parameters;
+    -moz-border-radius: $parameters;
+    -o-border-radius: $parameters;
+    border-radius: $parameters;
+}
+
+@mixin transformX($parameters){
+    -webkit-transform:translateX($parameters);
+    -moz-transform:translateX($parameters);
+    -o-transform:translateX($parameters);
+    transform:translateX($parameters);
+}
+
+@mixin transformY($parameters){
+    -webkit-transform:translateY($parameters);
+    -moz-transform:translateY($parameters);
+    -o-transform:translateY($parameters);
+    transform:translateY($parameters);
+}
+@mixin liner{
+    &:nth-child(1){
+        @content;
+    }
+}
+
+@mixin liner3{
+    &:nth-child(3){
+        @content;
+    }
+}
+
+@mixin border-top-right-radius($parameters){
+    -webkit-border-top-right-radius: $parameters;
+    -moz-border-top-right-radius: $parameters;
+    -o-border-top-right-radius: $parameters;
+    border-top-right-radius: $parameters;
+}
+
+@mixin border-top-right-radius($parameters){
+    -webkit-border-bottom-right-radius: $parameters;
+    -moz-border-bottom-right-radius: $parameters;
+    -o-border-bottom-right-radius: $parameters;
+    border-bottom-right-radius: $parameters;
+}

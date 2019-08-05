@@ -1,0 +1,929 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box; }
+
+a {
+  text-decoration: none; }
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  /*圖片垂直對齊該行文字的置中位置*/ }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
+
+.newitemsphoto {
+  background-image: url(../images/newitemspho.png);
+  max-width: 543px;
+  height: 290px;
+  margin: 2.5em auto;
+  position: relative; }
+  .newitemsphoto h2 {
+    position: absolute;
+    top: 7%;
+    left: 15%; }
+    .newitemsphoto h2 .gonewitems {
+      width: 20px;
+      height: 30px; }
+      .newitemsphoto h2 .gonewitems:hover {
+        background: #aef35f;
+        cursor: pointer;
+        border-radius: 50%; }
+    .newitemsphoto h2 a {
+      font-family: fantasy;
+      color: black;
+      font-size: 20px; }
+      .newitemsphoto h2 a:hover {
+        color: white; }
+
+@media (max-width: 767px) {
+  .newitemsphoto {
+    display: none; }
+  .content .selectbar li {
+    width: 98%;
+    margin-bottom: 1em;
+    float: left;
+    font-size: 35px; } }
+
+.content:after {
+  display: block;
+  clear: both;
+  content: ""; }
+
+.container {
+  text-align: center;
+  height: auto; }
+  .container:after {
+    display: block;
+    clear: both;
+    content: ""; }
+  .container h3 {
+    color: #626262;
+    font-family: 微軟正黑體, Microsoft JhengHei;
+    font-size: 36px;
+    line-height: initial;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center; }
+
+.container .customer_space {
+  display: inline-block;
+  font-family: 微軟正黑體, Microsoft JhengHei;
+  font-size: 22px;
+  letter-spacing: .5px;
+  margin-bottom: 20px; }
+  .container .customer_space li {
+    float: left;
+    margin: 1em;
+    -webkit-box-shadow: 1px 1px 8px 1px grey;
+    box-shadow: 1px 1px 8px 1px grey; }
+    .container .customer_space li h4,
+    .container .customer_space li p {
+      margin: 0.65em 0;
+      text-align: center;
+      font-weight: bold;
+      color: #333232;
+      font-size: 18px;
+      width: 100%; }
+    .container .customer_space li span {
+      color: #0394ee;
+      font-size: 18px;
+      padding: 15px; }
+      .container .customer_space li span:hover {
+        color: rgba(250, 33, 33, 0.808);
+        cursor: pointer; }
+  .container .customer_space img {
+    border-bottom: 1px solid #b6b4b4; }
+    .container .customer_space img:hover {
+      -webkit-box-shadow: 1px 1px 8px 1px #999898;
+      box-shadow: 1px 1px 8px 1px #999898;
+      cursor: pointer; }
+
+@media (max-width: 767px) {
+  .container .customer_space li {
+    float: none;
+    width: 98%;
+    margin: 1em auto; } }
+
+/*leftside_shoes*/
+.banner {
+  max-width: 960px;
+  margin: 50 auto;
+  background: #FFF;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+  position: relative;
+  text-align: left; }
+  .banner:after {
+    display: block;
+    clear: both;
+    content: ""; }
+
+.nikelogo {
+  width: 65px;
+  height: 65px;
+  margin-bottom: 10px; }
+
+.shoes_detailleft {
+  float: left;
+  background: -webkit-gradient(linear, left top, left bottom, from(#181818), to(#4b4646));
+  background: -webkit-linear-gradient(#181818, #4b4646);
+  background: -o-linear-gradient(#181818, #4b4646);
+  background: linear-gradient(#181818, #4b4646);
+  width: 270px;
+  color: #FFF;
+  padding: 30px;
+  margin: 5em 0;
+  margin-left: 50px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px; }
+
+@media (max-width: 905px) {
+  .shoes_detailleft {
+    float: none;
+    padding: 0px;
+    border: 0px;
+    margin: 1em 0;
+    height: auto;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -o-border-radius: 20px;
+    border-radius: 20px;
+    background-image: url(../images/mobile_redshoes.png);
+    width: 350px;
+    height: 230px; } }
+
+.product_title {
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  font-family: Arial; }
+  .product_title span {
+    font-weight: bold; }
+
+.product-description {
+  font-size: 15px;
+  font-family: 微軟正黑體, Microsoft JhengHei; }
+
+.product_shoes {
+  max-width: none;
+  width: 350px;
+  margin-top: 30px;
+  margin-left: -110px; }
+
+.product_suit,
+.product_suit-details {
+  text-align: center;
+  font-family: Arial;
+  font-size: 10px;
+  text-transform: uppercase; }
+
+.product_suit {
+  margin-bottom: 10px; }
+
+@media (max-width: 905px) {
+  .shoes_detailleft {
+    margin-top: 40px;
+    margin-left: 35px; }
+  .product_shoes {
+    display: none; }
+  .product-description {
+    display: none; }
+  .product_title {
+    font-size: 15px;
+    color: #6fe757;
+    text-align: center; }
+  .product_suit,
+  .product_suit-details {
+    color: #6fe757; }
+  .mobilenike {
+    margin-left: 1.5em; } }
+
+@media (max-width: 375px) {
+  .shoes_detailleft {
+    margin-left: 15px; } }
+
+/*rightside_shoes*/
+.shoes_detailright {
+  float: left;
+  width: 600px;
+  height: auto;
+  text-transform: uppercase;
+  padding: 30px 0 0 30px;
+  margin-top: 80px;
+  border-top: 1px solid rgba(190, 190, 190, 0.35);
+  border-right: 1px solid rgba(190, 190, 190, 0.35);
+  -webkit-border-bottom-right-radius: 20px;
+  -moz-border-bottom-right-radius: 20px;
+  -o-border-bottom-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  -webkit-border-bottom-right-radius: 20px;
+  -moz-border-bottom-right-radius: 20px;
+  -o-border-bottom-right-radius: 20px;
+  border-bottom-right-radius: 20px; }
+
+@media (max-width: 905px) {
+  .shoes_detailright {
+    width: 98%;
+    float: none;
+    margin-top: 0px;
+    border: none;
+    margin-left: 12px; } }
+
+.shoes_detailright p {
+  line-height: 1.5em; }
+
+.manuse p {
+  font-size: 24px; }
+
+.titleRt_words p {
+  font-family: Helvetica;
+  font-size: 24px; }
+
+.product_price p {
+  font-size: 25px;
+  margin-bottom: 20px; }
+
+.shoeschangeside img {
+  font-size: 40px;
+  cursor: pointer; }
+  .shoeschangeside img:hover {
+    background: #dfdede; }
+
+.changesize {
+  font-size: 24px; }
+
+.shoes_size .selectsize {
+  padding-top: 17px;
+  margin-bottom: 15px; }
+  .shoes_size .selectsize li {
+    float: left;
+    padding: 10px;
+    border: 1px solid #c4bcbc;
+    -webkit-border-radius: 9%;
+    -moz-border-radius: 9%;
+    -o-border-radius: 9%;
+    border-radius: 9%;
+    margin-right: 10px; }
+    .shoes_size .selectsize li:hover {
+      border: 2px solid #000;
+      -webkit-transition: all 0.2s;
+      -moz-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s; }
+    .shoes_size .selectsize li a {
+      display: block;
+      font-size: 25px;
+      color: #000;
+      border-bottom: 5px solid #fff; }
+
+.purchase_btn {
+  padding-top: 50px; }
+  .purchase_btn input {
+    font-size: 16px;
+    padding: 12px 20px;
+    font-family: 微軟正黑體, Microsoft JhengHei;
+    width: 72%;
+    background: #050505;
+    color: #FFF;
+    cursor: pointer;
+    border: 1px solid rgba(129, 127, 127, 0.589);
+    -webkit-border-radius: 2%;
+    -moz-border-radius: 2%;
+    -o-border-radius: 2%;
+    border-radius: 2%;
+    outline: none; }
+    .purchase_btn input:hover {
+      background: #b9b8b8;
+      border: 1px solid rgba(158, 156, 156, 0.589);
+      -webkit-transition: all 0.2s;
+      -moz-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s; }
+
+.giftclick {
+  background: #000;
+  width: 40px;
+  height: 40px;
+  padding: 11px;
+  border-radius: 2%;
+  cursor: pointer; }
+  .giftclick:hover {
+    background: #b9b8b8;
+    border: 1px solid rgba(158, 156, 156, 0.589);
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s; }
+
+.likeshare_bar img {
+  padding-top: 10px;
+  padding-bottom: 45px;
+  margin: 10px 6px 6px 0;
+  cursor: pointer; }
+  .likeshare_bar img:hover {
+    -webkit-animation: move 1s infinite;
+    animation: move 1s infinite; }
+
+@-webkit-keyframes move {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+  50% {
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0); }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+
+@keyframes move {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+  50% {
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0); }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+
+/*sign in*/
+.signinbar {
+  margin: 6% auto;
+  max-width: 420px;
+  background: #202736; }
+
+.signinside {
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 4.1em;
+  margin-left: 57px; }
+  .signinside h6 {
+    color: #fff;
+    font-size: 2.1em;
+    font-family: Helvetica;
+    margin-bottom: 8px; }
+  .signinside p > span {
+    font-size: 18px;
+    font-family: Helvetica;
+    color: #c0ee41; }
+  .signinside p a {
+    display: block;
+    color: #fff;
+    font-size: 13px;
+    float: left;
+    font-family: Helvetica; }
+    .signinside p a:hover {
+      color: #b9b8b8;
+      -webkit-transition: all 0.2s;
+      -moz-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s; }
+  .signinside form {
+    border: 1px solid #cac8c8;
+    background: #232b3b;
+    margin-top: 5px;
+    padding: 1.5px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    width: 180px; }
+    .signinside form label > img {
+      border-right: 1px solid #6a6b6d; }
+  .signinside input {
+    border: 2px solid #232b3b;
+    background: #232b3b;
+    outline: none;
+    width: 90px;
+    cursor: pointer;
+    color: #fff; }
+  .signinside .tick {
+    float: left;
+    width: 10px;
+    height: 10px;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    -o-border-radius: 1px;
+    border-radius: 1px;
+    border: 1px solid #c5c3c3; }
+  .signinside .sendbtn {
+    background: #e6b333;
+    border: none;
+    color: #fff;
+    text-align: center;
+    font-size: 1.2em;
+    cursor: pointer;
+    width: 180px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    padding: 5px;
+    height: 30px;
+    margin-top: 6px; }
+    .signinside .sendbtn:hover {
+      background: #b9b8b8;
+      border: 1px solid rgba(158, 156, 156, 0.589);
+      -webkit-transition: all 0.2s;
+      -moz-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s; }
+  .signinside .fbbtn {
+    background: #21538d;
+    border: none;
+    color: #fff;
+    text-align: center;
+    font-size: 1.2em;
+    cursor: pointer;
+    width: 180px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    padding: 5px;
+    height: 30px;
+    margin-top: 6px; }
+    .signinside .fbbtn:hover {
+      background: #b9b8b8;
+      border: 1px solid rgba(158, 156, 156, 0.589);
+      -webkit-transition: all 0.2s;
+      -moz-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s; }
+
+@media (max-width: 375px) {
+  .signinside {
+    padding: 0; } }
+
+.wrap {
+  position: relative;
+  overflow: hidden;
+  max-width: 960px;
+  margin: 0 auto;
+  min-height: 1000px; }
+
+.mobile-close {
+  display: inline-block;
+  margin: 1em;
+  text-decoration: none;
+  margin-left: 15px;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap; }
+
+.mobile-link {
+  background: #FFF;
+  padding: 5px;
+  display: inline-block;
+  margin: .3em;
+  text-decoration: none;
+  display: block;
+  position: relative;
+  width: 48px;
+  height: 48px;
+  margin-top: 1px;
+  cursor: pointer;
+  display: none; }
+  .mobile-link span {
+    display: block;
+    width: 36px;
+    height: 2px;
+    background-color: #000;
+    position: absolute;
+    opacity: 1;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    /*最下面線*/ }
+    .mobile-link span:nth-child(1) {
+      -webkit-transform: translateY(-10px);
+      -moz-transform: translateY(-10px);
+      -o-transform: translateY(-10px);
+      -ms-transform: translateY(-10px);
+      transform: translateY(-10px); }
+    .mobile-link span:nth-child(3) {
+      -webkit-transform: translateY(10px);
+      -moz-transform: translateY(10px);
+      -o-transform: translateY(10px);
+      -ms-transform: translateY(10px);
+      transform: translateY(10px); }
+
+@media (max-width: 768px) {
+  .mobile-link {
+    display: inline-block; } }
+
+.main {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; }
+
+.header {
+  max-height: 50px;
+  border-bottom: 1px solid rgba(214, 211, 211, 0.76);
+  margin-bottom: 1em;
+  position: relative; }
+  .header:after {
+    display: block;
+    clear: both;
+    content: ""; }
+  .header .menu {
+    float: right; }
+    .header .menu li {
+      float: left; }
+      .header .menu li a {
+        font-size: 14px;
+        color: #7c7c7c;
+        height: 50px;
+        line-height: 50px;
+        padding: 0 1em;
+        display: block;
+        -webkit-transition: all 0.8s;
+        -moz-transition: all 0.8s;
+        -o-transition: all 0.8s;
+        transition: all 0.8s;
+        padding: 0.8em;
+        cursor: pointer; }
+        .header .menu li a:hover {
+          color: #000;
+          font-weight: bold;
+          -webkit-transition: all 0.3s;
+          -moz-transition: all 0.3s;
+          -o-transition: all 0.3s;
+          transition: all 0.3s; }
+
+.open .header .menu {
+  display: none; }
+
+@media (max-width: 767px) {
+  .header {
+    position: fixed;
+    width: 100%;
+    background: #FFF; } }
+
+.menu .discountwords {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #f03b3b; }
+
+@media (max-width: 767px) {
+  .menu .discountwords {
+    display: none; } }
+
+.accountlogo img {
+  width: 14px;
+  height: 16px; }
+
+.shooplogo img {
+  width: 17px;
+  height: 17px; }
+
+.Lgelogo img {
+  width: 15px;
+  height: 15px; }
+
+.aside {
+  position: absolute;
+  /*上下滿版*/
+  top: 0;
+  bottom: 0;
+  width: 260px;
+  height: 100%;
+  background-color: #979795;
+  overflow: hidden;
+  -webkit-transform: translateX(-270px);
+  -moz-transform: translateX(-270px);
+  -o-transform: translateX(-270px);
+  -ms-transform: translateX(-270px);
+  transform: translateX(-270px);
+  -webkit-transition: all 0.6s;
+  -moz-transition: all 0.6s;
+  -o-transition: all 0.6s;
+  transition: all 0.6s;
+  z-index: 200; }
+  .aside .nikelogo {
+    float: left;
+    background-color: #FFF;
+    width: 56px;
+    height: 56px;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    border: 1px solid #000;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s; }
+    .aside .nikelogo:hover {
+      background-color: #f53434; }
+  .aside .menu li {
+    margin: 1em;
+    color: #FFF; }
+    .aside .menu li a {
+      color: #FFF;
+      padding: 1em;
+      display: block;
+      border: 1px solid #000;
+      font-family: fantasy;
+      font-size: 16px;
+      color: #070806; }
+      .aside .menu li a:hover {
+        color: #000;
+        background: #FFF;
+        -webkit-transition: all 0.4s;
+        -moz-transition: all 0.4s;
+        -o-transition: all 0.4s;
+        transition: all 0.4s; }
+
+/*增加 class open 觸發選單*/
+.open .main {
+  -webkit-transform: translateX(270px);
+  -moz-transform: translateX(270px);
+  -o-transform: translateX(270px);
+  -ms-transform: translateX(270px);
+  transform: translateX(270px); }
+
+.open .aside {
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  -o-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  transform: translateX(0px); }
+
+.aside .menu .section_header {
+  background: #161a12;
+  font-weight: bold; }
+  .aside .menu .section_header a {
+    color: #FFF; }
+
+.rightsrh {
+  padding: 1em;
+  position: relative; }
+  .rightsrh p {
+    margin-bottom: 1em; }
+
+@media (max-width: 767px) {
+  .rightsrh {
+    display: none; } }
+
+.serch {
+  float: right;
+  border: 2px solid #000;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+  position: absolute;
+  top: 0;
+  right: 0; }
+  .serch form {
+    width: 110px; }
+  .serch option {
+    background-color: #FFF;
+    border: 1px solid #aaa;
+    padding: 5px 8px;
+    width: auto;
+    height: auto;
+    color: #FFF;
+    font-weight: 700;
+    font-size: 14px;
+    opacity: 0.8;
+    margin-left: 4px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px; }
+  .serch input {
+    border: 1px solid #fffefe;
+    width: 58px;
+    height: 19px;
+    outline: none;
+    margin-bottom: 1px; }
+  .serch i {
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+    cursor: pointer;
+    margin-right: 2px;
+    margin-top: 2px; }
+
+@media (max-width: 767px) {
+  .serch {
+    margin-top: 2.95em;
+    margin-right: 1em; }
+    .serch input {
+      width: 75px;
+      height: 19px; }
+    .serch form {
+      background: #FFF;
+      -webkit-border-radius: 30px;
+      -moz-border-radius: 30px;
+      -o-border-radius: 30px;
+      border-radius: 30px; } }
+
+.main:after {
+  display: block;
+  clear: both;
+  content: ""; }
+
+.contentlogo .bearphoto {
+  background-image: url(../images/bearphoto.png);
+  width: 142px;
+  height: 184px;
+  margin: 1em auto;
+  cursor: pointer;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap; }
+
+@media (max-width: 767px) {
+  .contentlogo .bearphoto {
+    margin-top: 4.5em; } }
+
+.selectbar {
+  border-top: 4px double #d3d3d3;
+  border-bottom: 4px double #d3d3d3; }
+
+.content {
+  text-align: center; }
+  .content:after {
+    display: block;
+    clear: both;
+    content: ""; }
+  .content .selectbar {
+    display: inline-block;
+    margin-top: 1em; }
+    .content .selectbar li {
+      float: left; }
+      .content .selectbar li a {
+        display: block;
+        font-family: fantasy;
+        margin: 1px 1.5em;
+        padding: 5px 20px;
+        color: #4b4a4a;
+        border-bottom: 1px solid #FFF; }
+        .content .selectbar li a:hover {
+          color: #82a806;
+          -webkit-transition: all 0.35s;
+          -moz-transition: all 0.35s;
+          -o-transition: all 0.35s;
+          transition: all 0.35s; }
+
+.container {
+  text-align: center;
+  height: auto; }
+  .container:after {
+    display: block;
+    clear: both;
+    content: ""; }
+  .container h3 {
+    color: #626262;
+    font-family: 微軟正黑體, Microsoft JhengHei;
+    font-size: 36px;
+    line-height: initial;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center; }
+
+/*footer*/
+.footer {
+  width: 100%;
+  position: relative;
+  height: auto;
+  background-color: #0e0c0c; }
+  .footer:after {
+    display: block;
+    clear: both;
+    content: ""; }
+  .footer .col {
+    width: 190px;
+    height: auto;
+    float: left;
+    padding: 0px 20px 20px 50px; }
+    .footer .col h5 {
+      font-family: inherit;
+      font-size: 14px;
+      line-height: 17px;
+      padding: 20px 0px 5px 0px;
+      color: rgba(255, 255, 255, 0.2);
+      letter-spacing: 0.250em;
+      text-transform: uppercase;
+      font-size: 12px;
+      /*字體大寫*/ }
+    .footer .col ul li {
+      margin: 10px 0 10px 0; }
+      .footer .col ul li a {
+        color: #999999;
+        font-size: 14px;
+        font-family: 微軟正黑體, Microsoft JhengHei;
+        padding: 5px 0px 5px 0px;
+        cursor: pointer;
+        -webkit-transition: all 0.2s;
+        -moz-transition: all 0.2s;
+        -o-transition: all 0.2s;
+        transition: all 0.2s; }
+        .footer .col ul li a:hover {
+          color: #FFF;
+          -webkit-transition: all 0.1s;
+          -moz-transition: all 0.1s;
+          -o-transition: all 0.1s;
+          transition: all 0.1s; }
+  .footer .social {
+    position: absolute;
+    top: 0;
+    right: 0; }
+    .footer .social img {
+      -webkit-border-radius: 100%;
+      -moz-border-radius: 100%;
+      -o-border-radius: 100%;
+      border-radius: 100%;
+      cursor: pointer;
+      margin-right: 8.5px; }
+
+.social ul li {
+  float: left;
+  margin-right: 1em; }
+
+.contain {
+  position: relative; }
+
+@media (max-width: 767px) {
+  .footer .social {
+    position: inherit;
+    /*繼承自父層 position 定位屬性的值。*/ } }
+
+@media (max-width: 500px) {
+  .footer .col {
+    width: 50%; } }
+
+@media (max-width: 375px) {
+  .footer .col {
+    width: 100%; } }
+
+.contain:after {
+  display: block;
+  clear: both;
+  content: ""; }
+
+.footer_endline {
+  width: 100%;
+  height: auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 5px 0; }
+  .footer_endline p {
+    text-align: center;
+    font-family: Arial;
+    font-size: 13px;
+    color: #999999;
+    padding: 18px 0; }
+
+/*只有單獨一個樣式的話還需要用$變數來管理嗎*/
